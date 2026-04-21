@@ -124,8 +124,8 @@ export default function CheckoutPage() {
 
         {/* Caixa de Pagamento */}
         <div className="glass p-8 rounded-[2.5rem] border-primary/20 shadow-2xl relative overflow-hidden bg-[#0b132b]/80">
-          <div className="absolute top-0 right-0 bg-primary text-white font-bold text-xs px-4 py-2 rounded-bl-2xl uppercase tracking-widest flex items-center gap-1 shadow-lg">
-             <ShieldCheck className="w-4 h-4" /> Pagamento Real
+          <div className="absolute top-0 right-0 bg-green-500 text-white font-bold text-xs px-4 py-2 rounded-bl-2xl uppercase tracking-widest flex items-center gap-1 shadow-lg">
+             <ShieldCheck className="w-4 h-4" /> Site Protegido
           </div>
           
           {!paymentData ? (
@@ -141,9 +141,9 @@ export default function CheckoutPage() {
                <button 
                  onClick={handleGeneratePix}
                  disabled={loading}
-                 className="w-full h-16 rounded-2xl bg-[#009ee3] text-white font-bold text-xl flex items-center justify-center gap-3 hover:bg-[#009ee3]/90 transition-all hover:scale-[1.02] shadow-xl shadow-[#009ee3]/20 disabled:opacity-50"
+                 className="w-full h-16 rounded-2xl bg-green-600 text-white font-bold text-xl flex items-center justify-center gap-3 hover:bg-green-500 transition-all hover:scale-[1.02] shadow-xl shadow-green-500/20 disabled:opacity-50"
                >
-                 {loading ? <Loader2 className="w-6 h-6 animate-spin" /> : "Gerar PIX de R$ 47,00"}
+                 {loading ? <Loader2 className="w-6 h-6 animate-spin" /> : "Finalizar Compra"}
                </button>
              </>
           ) : (
@@ -183,22 +183,17 @@ export default function CheckoutPage() {
           )}
 
           <div className="mt-8 flex items-center justify-center gap-6 border-t border-white/10 pt-8">
-             {/* Mercado Pago SVG */}
-             <svg width="140" height="32" viewBox="0 0 1018 208" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-80 hover:opacity-100 transition-all">
-                <path d="M125.7 151l-25.2-61.9-25 61.9H37.3L77 56.7h45.8l39.8 94.3h-36.9zM214.2 151l-25.2-61.9-25 61.9h-38.2l39.7-94.3h45.8l39.8 94.3h-36.9zM302.7 151l-25.2-61.9-25 61.9h-38.2l39.7-94.3h45.8l39.8 94.3h-36.9z" fill="#009EE3"/>
-                <circle cx="914" cy="104" r="104" fill="#009EE3"/>
-                <path d="M950 85l-45 45-25-25" stroke="white" strokeWidth="15" strokeLinecap="round" strokeLinejoin="round"/>
-                <text x="0" y="145" fill="white" fontSize="140" fontWeight="bold" fontFamily="Arial">Mercado Pago</text>
-             </svg>
-             
+             <img 
+                src="https://i.postimg.cc/h4mzxn0k/555.png" 
+                alt="Mercado Pago" 
+                className="h-10 w-auto opacity-80 hover:opacity-100 transition-all" 
+             />
              <div className="h-6 w-[1px] bg-white/10"></div>
-             
-             {/* Pix SVG */}
-             <svg width="100" height="32" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-80 hover:opacity-100 transition-all">
-                <path d="M256 0L0 256l256 256 256-256L256 0zm0 398.2L113.8 256 256 113.8 398.2 256 256 398.2z" fill="#32BCAD"/>
-                <path d="M256 160.7L160.7 256 256 351.3 351.3 256 256 160.7z" fill="#32BCAD"/>
-                <text x="420" y="300" fill="white" fontSize="180" fontWeight="bold" fontFamily="Arial">PIX</text>
-             </svg>
+             <img 
+                src="https://i.postimg.cc/RVXMJpjC/66666.webp" 
+                alt="Pix" 
+                className="h-10 w-auto opacity-80 hover:opacity-100 transition-all" 
+             />
           </div>
         </div>
 

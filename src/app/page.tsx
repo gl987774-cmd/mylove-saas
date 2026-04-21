@@ -211,15 +211,15 @@ export default function Home() {
 
         {/* --- PREÇOS SECTION --- */}
         <div className="mt-32 mb-40 text-center px-4">
-           <h2 className="text-5xl md:text-6xl font-black tracking-tight mb-20 font-sans">
-             Preços
+           <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-20 font-sans max-w-2xl mx-auto leading-tight">
+             Um gesto que vale mais que mil palavras ❤️
            </h2>
 
            <div className="max-w-md mx-auto bg-[#0b132b] rounded-3xl border border-rose-500 shadow-[0_0_60px_rgba(225,29,72,0.2)] relative flex flex-col pt-12 pb-8 px-8 text-left transition-transform hover:-translate-y-2 duration-300">
              
              {/* Badge Superior */}
              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-rose-500 text-white font-bold text-sm tracking-widest px-6 py-2 rounded-full flex items-center gap-2 shadow-lg z-20">
-               <span>★</span> COMECE AQUI
+               <span>★</span> CRIAR ALGO INESQUECÍVEL ✨
              </div>
 
              {/* Cabeçalho do Preço */}
