@@ -11,7 +11,7 @@ export default function CheckoutPage() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
-  const [paymentData, setPaymentData] = useState<{ qr_code: string; qr_code_base64: string } | null>(null);
+  const [paymentData, setPaymentData] = useState<{ qr_code: string; qr_code_base64: string; payment_id: string } | null>(null);
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
