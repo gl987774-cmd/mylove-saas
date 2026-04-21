@@ -182,10 +182,18 @@ export default function CheckoutPage() {
              </div>
           )}
 
-          <div className="mt-8 flex items-center justify-center gap-4 border-t border-white/5 pt-6">
-             <img src="https://logopng.com.br/logos/mercado-pago-82.png" alt="Mercado Pago" className="h-4 opacity-50 grayscale hover:grayscale-0 transition-all" />
-             <div className="h-4 w-[1px] bg-white/20"></div>
-             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Logo_Pix.png/1200px-Logo_Pix.png" alt="Pix" className="h-4 opacity-50 grayscale hover:grayscale-0 transition-all" />
+          <div className="mt-8 flex items-center justify-center gap-6 border-t border-white/10 pt-8">
+             <img 
+                src="https://www.mercadopago.com/static/images/mercadopago-logo.png" 
+                alt="Mercado Pago" 
+                className="h-8 w-auto opacity-70 hover:opacity-100 transition-all pointer-events-none" 
+             />
+             <div className="h-6 w-[1px] bg-white/10"></div>
+             <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo_Pix.png" 
+                alt="Pix" 
+                className="h-8 w-auto opacity-70 hover:opacity-100 transition-all pointer-events-none" 
+             />
           </div>
         </div>
 
