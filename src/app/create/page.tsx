@@ -130,7 +130,7 @@ export default function CreatePage() {
                 <input 
                   required
                   type="text" 
-                  className="w-full h-14 px-5 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all text-slate-900 placeholder:text-slate-300"
+                  className="w-full h-14 px-5 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:outline-none focus:border-primary/30 focus:bg-white focus:ring-4 focus:ring-primary/5 transition-all text-slate-900 placeholder:text-slate-400"
                   placeholder="Ex: Ana"
                   value={formData.name1}
                   onChange={e => setFormData({...formData, name1: e.target.value})}
@@ -141,7 +141,7 @@ export default function CreatePage() {
                 <input 
                   required
                   type="text" 
-                  className="w-full h-14 px-5 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all text-slate-900 placeholder:text-slate-300"
+                  className="w-full h-14 px-5 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:outline-none focus:border-primary/30 focus:bg-white focus:ring-4 focus:ring-primary/5 transition-all text-slate-900 placeholder:text-slate-400"
                   placeholder="Ex: João"
                   value={formData.name2}
                   onChange={e => setFormData({...formData, name2: e.target.value})}
@@ -154,7 +154,7 @@ export default function CreatePage() {
               <input 
                 required
                 type="date" 
-                className="w-full h-14 px-5 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all text-slate-900"
+                className="w-full h-14 px-5 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:outline-none focus:border-primary/30 focus:bg-white focus:ring-4 focus:ring-primary/5 transition-all text-slate-900"
                 value={formData.startDate}
                 onChange={e => setFormData({...formData, startDate: e.target.value})}
               />
@@ -165,7 +165,7 @@ export default function CreatePage() {
               <textarea 
                 required
                 rows={4}
-                className="w-full p-5 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all text-slate-900 placeholder:text-slate-300 resize-none"
+                className="w-full p-5 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:outline-none focus:border-primary/30 focus:bg-white focus:ring-4 focus:ring-primary/5 transition-all text-slate-900 placeholder:text-slate-400 resize-none"
                 placeholder="Escreva algo lindo que marque a história de vocês..."
                 value={formData.message}
                 onChange={e => setFormData({...formData, message: e.target.value})}
@@ -176,7 +176,7 @@ export default function CreatePage() {
                <label className="text-sm font-bold uppercase tracking-wider text-slate-400">Música Tema (Link do YouTube)</label>
               <input 
                 type="url" 
-                className="w-full h-14 px-5 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all text-slate-900 placeholder:text-slate-300"
+                className="w-full h-14 px-5 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:outline-none focus:border-primary/30 focus:bg-white focus:ring-4 focus:ring-primary/5 transition-all text-slate-900 placeholder:text-slate-400"
                 placeholder="https://www.youtube.com/watch?v=..."
                 value={formData.youtubeUrl}
                 onChange={e => setFormData({...formData, youtubeUrl: e.target.value})}
@@ -189,7 +189,7 @@ export default function CreatePage() {
               <input 
                 required
                 type="email" 
-                className="w-full h-14 px-5 bg-primary/5 border border-primary/20 rounded-2xl focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all text-slate-900 placeholder:text-slate-400 font-medium"
+                className="w-full h-14 px-5 bg-primary/[0.03] border-2 border-primary/10 rounded-2xl focus:outline-none focus:border-primary/30 focus:bg-white focus:ring-4 focus:ring-primary/5 transition-all text-slate-900 placeholder:text-slate-400 font-medium"
                 placeholder="Para onde enviaremos o QR Code Mágico?"
                 value={formData.email}
                 onChange={e => setFormData({...formData, email: e.target.value})}

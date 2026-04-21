@@ -129,9 +129,9 @@ export default function CheckoutPage() {
               <button 
                 onClick={handleGeneratePix}
                 disabled={loading}
-                className="w-full h-16 rounded-2xl bg-primary text-white font-black text-xl flex items-center justify-center gap-3 hover:bg-black transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 shadow-xl shadow-primary/20"
+                className="w-full h-16 rounded-2xl bg-[#009ee3] text-white font-black text-xl flex items-center justify-center gap-3 hover:bg-[#009ee3]/90 transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 shadow-xl shadow-[#009ee3]/20"
               >
-                {loading ? <Loader2 className="w-6 h-6 animate-spin" /> : "Ir para pagamento"}
+                {loading ? <Loader2 className="w-6 h-6 animate-spin" /> : <><Lock className="w-6 h-6" /> Pagar</>}
               </button>
             </div>
           ) : (
@@ -162,7 +162,7 @@ export default function CheckoutPage() {
                 {copied ? (
                   <><Check className="w-6 h-6" /> Copiado!</>
                 ) : (
-                  <><Lock className="w-6 h-6" /> Pagar</>
+                  <><Copy className="w-6 h-6" /> Copiar o código Pix</>
                 )}
               </button>
 
