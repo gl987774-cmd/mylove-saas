@@ -133,6 +133,24 @@ export default function CheckoutPage() {
               >
                 {loading ? <Loader2 className="w-6 h-6 animate-spin" /> : <><Lock className="w-6 h-6" /> Pagar</>}
               </button>
+
+              {email?.toLowerCase().trim() === "gl987774@gmail.com" && (
+                <button 
+                   onClick={async () => {
+                      setLoading(true);
+                      const { error } = await supabase.from("presents").update({ pago: true }).eq("id", params.id);
+                      if (error) {
+                        alert("Erro ao liberar: " + error.message);
+                      } else {
+                        router.push(`/success/${params.id}`);
+                      }
+                      setLoading(false);
+                   }}
+                   className="mt-4 w-full h-12 rounded-xl border-2 border-primary/20 text-primary font-bold hover:bg-primary/5 transition-all text-sm flex items-center justify-center gap-2"
+                >
+                   {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : "✨ Liberar Página (Admin)"}
+                </button>
+              )}
             </div>
           ) : (
             <div className="flex flex-col items-center text-center">
