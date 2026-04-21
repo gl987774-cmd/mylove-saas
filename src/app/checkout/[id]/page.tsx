@@ -183,17 +183,22 @@ export default function CheckoutPage() {
           )}
 
           <div className="mt-8 flex items-center justify-center gap-6 border-t border-white/10 pt-8">
-             <img 
-                src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.22/mercadopago/logo__large.png" 
-                alt="Mercado Pago" 
-                className="h-8 w-auto brightness-200 grayscale-0 opacity-80 hover:opacity-100 transition-all" 
-             />
+             {/* Mercado Pago SVG */}
+             <svg width="140" height="32" viewBox="0 0 1018 208" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-80 hover:opacity-100 transition-all">
+                <path d="M125.7 151l-25.2-61.9-25 61.9H37.3L77 56.7h45.8l39.8 94.3h-36.9zM214.2 151l-25.2-61.9-25 61.9h-38.2l39.7-94.3h45.8l39.8 94.3h-36.9zM302.7 151l-25.2-61.9-25 61.9h-38.2l39.7-94.3h45.8l39.8 94.3h-36.9z" fill="#009EE3"/>
+                <circle cx="914" cy="104" r="104" fill="#009EE3"/>
+                <path d="M950 85l-45 45-25-25" stroke="white" strokeWidth="15" strokeLinecap="round" strokeLinejoin="round"/>
+                <text x="0" y="145" fill="white" fontSize="140" fontWeight="bold" fontFamily="Arial">Mercado Pago</text>
+             </svg>
+             
              <div className="h-6 w-[1px] bg-white/10"></div>
-             <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo_Pix.png" 
-                alt="Pix" 
-                className="h-8 w-auto brightness-110 opacity-80 hover:opacity-100 transition-all" 
-             />
+             
+             {/* Pix SVG */}
+             <svg width="100" height="32" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-80 hover:opacity-100 transition-all">
+                <path d="M256 0L0 256l256 256 256-256L256 0zm0 398.2L113.8 256 256 113.8 398.2 256 256 398.2z" fill="#32BCAD"/>
+                <path d="M256 160.7L160.7 256 256 351.3 351.3 256 256 160.7z" fill="#32BCAD"/>
+                <text x="420" y="300" fill="white" fontSize="180" fontWeight="bold" fontFamily="Arial">PIX</text>
+             </svg>
           </div>
         </div>
 
