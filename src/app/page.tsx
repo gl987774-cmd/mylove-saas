@@ -3,14 +3,10 @@
 import Link from "next/link";
 import { Heart, Sparkles, Clock, QrCode, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
-import Script from "next/script";
 
 export default function Home() {
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Script do TikTok para carregar o vídeo */}
-      <Script src="https://www.tiktok.com/embed.js" strategy="lazyOnload" />
-
       {/* Glow Effects */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-[500px] bg-primary/20 blur-[120px] rounded-full pointer-events-none" />
       
@@ -55,17 +51,24 @@ export default function Home() {
            />
         </div>
 
-        {/* TikTok Embed - NOVO */}
-        <div className="max-w-[325px] mx-auto mb-16 relative">
-          <div className="absolute inset-0 bg-primary/10 blur-[50px] rounded-full -z-10" />
-          <blockquote 
-            className="tiktok-embed rounded-3xl overflow-hidden shadow-2xl border border-white/5" 
-            cite="https://www.tiktok.com/@zoemeireles/video/7395703156497239301" 
-            data-video-id="7395703156497239301" 
-            style={{ maxWidth: '605px', minWidth: '325px' }}
-          > 
-            <section> </section> 
-          </blockquote>
+        {/* Video Player Nativo - Premium e sem Links */}
+        <div className="max-w-[320px] mx-auto mb-20 relative px-2">
+          <div className="absolute inset-0 bg-primary/20 blur-[60px] rounded-full -z-10 animate-pulse" />
+          <div className="relative rounded-[2.5rem] overflow-hidden border-4 border-white/10 shadow-[0_0_50px_rgba(225,29,72,0.3)]">
+            <video 
+              autoPlay 
+              muted 
+              loop 
+              playsInline 
+              className="w-full h-auto block"
+            >
+              <source src="/video-propaganda.mp4" type="video/mp4" />
+              Seu navegador não suporta vídeos.
+            </video>
+            
+            {/* Overlay sutil para dar um aspecto mais "Premium" */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+          </div>
         </div>
 
         {/* --- Social Proof: +5616 Casais Felizes --- */}
