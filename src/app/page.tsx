@@ -3,13 +3,17 @@
 import Link from "next/link";
 import { Heart, Sparkles, Clock, QrCode, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
+import Script from "next/script";
 
 export default function Home() {
   return (
     <div className="min-h-screen relative overflow-hidden">
+      {/* Script do TikTok para carregar o vídeo */}
+      <Script src="https://www.tiktok.com/embed.js" strategy="lazyOnload" />
+
       {/* Glow Effects */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-[500px] bg-primary/20 blur-[120px] rounded-full pointer-events-none" />
-
+      
       {/* Header */}
       <header className="container mx-auto px-4 py-6 relative z-10 flex justify-between items-center">
         <div className="flex items-center gap-2 text-2xl font-bold tracking-tighter">
@@ -40,7 +44,7 @@ export default function Home() {
         </p>
 
         {/* Hero Image (Celular + QR Code flutuante) */}
-        <div className="relative w-full max-w-xl mx-auto mb-8 group perspective">
+        <div className="relative w-full max-w-xl mx-auto mb-12 group perspective">
            {/* Glow pesado atrás da imagem para dar o efeito Ghibli/Espacial */}
            <div className="absolute inset-0 bg-primary/20 blur-[80px] rounded-full pointer-events-none group-hover:bg-primary/30 transition-colors duration-700" />
            
@@ -49,6 +53,19 @@ export default function Home() {
              alt="Amostra do Presente Story Infinito" 
              className="w-full h-auto relative z-10 drop-shadow-[0_20px_50px_rgba(225,29,72,0.3)] hover:scale-105 transition-transform duration-700" 
            />
+        </div>
+
+        {/* TikTok Embed - NOVO */}
+        <div className="max-w-[325px] mx-auto mb-16 relative">
+          <div className="absolute inset-0 bg-primary/10 blur-[50px] rounded-full -z-10" />
+          <blockquote 
+            className="tiktok-embed rounded-3xl overflow-hidden shadow-2xl border border-white/5" 
+            cite="https://www.tiktok.com/@zoemeireles/video/7395703156497239301" 
+            data-video-id="7395703156497239301" 
+            style={{ maxWidth: '605px', minWidth: '325px' }}
+          > 
+            <section> </section> 
+          </blockquote>
         </div>
 
         {/* --- Social Proof: +5616 Casais Felizes --- */}
