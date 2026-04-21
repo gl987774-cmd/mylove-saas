@@ -21,7 +21,7 @@ export default function CreatePage() {
 
   const handlePhotoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(e.target.files || []);
-    const remainingSlots = 3 - photos.length;
+    const remainingSlots = 7 - photos.length;
     const filesToProcess = files.slice(0, remainingSlots);
 
     filesToProcess.forEach(file => {
@@ -92,7 +92,7 @@ export default function CreatePage() {
           <form onSubmit={handleSubmit} className="space-y-8">
             {/* Fotos */}
             <div className="space-y-3">
-              <label className="text-sm font-bold uppercase tracking-wider text-slate-400">Fotos do Casal (Até 3)</label>
+              <label className="text-sm font-bold uppercase tracking-wider text-slate-400">Fotos do Casal (Até 7)</label>
               
               <div className="grid grid-cols-3 gap-4">
                 {photos.map((photo, i) => (
@@ -108,7 +108,7 @@ export default function CreatePage() {
                   </div>
                 ))}
                 
-                {photos.length < 3 && (
+                {photos.length < 7 && (
                   <label className="cursor-pointer aspect-square rounded-2xl flex flex-col items-center justify-center gap-2 border-2 border-dashed border-slate-200 hover:border-primary/50 transition-all hover:bg-primary/5 text-slate-400 hover:text-primary">
                     <ImagePlus className="w-7 h-7" />
                     <span className="text-xs font-bold uppercase">Adicionar</span>
