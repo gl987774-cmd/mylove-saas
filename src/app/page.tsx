@@ -133,26 +133,15 @@ export default function Home() {
             <div className="bg-[#0b132b] border border-white/5 p-6 rounded-[1.5rem] flex flex-col items-center gap-6 shadow-xl hover:-translate-y-2 transition-transform duration-300">
                <h4 className="font-bold text-lg text-center tracking-wide">1. Crie o Story Infinito</h4>
                <div className="w-full h-40 rounded-xl flex items-center justify-center overflow-hidden relative border border-white/5 bg-[#050914] shadow-inner">
-                  {/* Pedaço de Interface Estilo Celular (Instagram Mock) */}
-                  <div className="w-11/12 h-5/6 bg-[#1a1b26] rounded-xl flex items-start p-2 gap-2 relative overflow-hidden text-[10px]">
-                     <div className="w-1/2 h-full bg-cover bg-center rounded-lg relative bg-[url('https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=200&auto=format&fit=crop')]" />
-                     <div className="w-1/2 h-full flex flex-col gap-2 relative">
-                        <div className="text-white/80 font-bold mt-1 tracking-widest text-[#e11d48]">I ♥ U</div>
-                        <div className="w-8 h-8 rounded-full bg-yellow-400 absolute bottom-2 right-2 flex items-center justify-center shadow-lg transform rotate-12">
-                          <span className="text-sm">😘</span>
-                        </div>
-                     </div>
-                  </div>
+                  <img src="https://i.postimg.cc/P5gP3FKZ/0000.jpg" alt="Story Infinito" className="w-full h-full object-cover rounded-lg" />
                </div>
             </div>
 
             {/* Passo 2 */}
             <div className="bg-[#0b132b] border border-white/5 p-6 rounded-[1.5rem] flex flex-col items-center gap-6 shadow-xl hover:-translate-y-2 transition-transform duration-300">
                <h4 className="font-bold text-lg text-center tracking-wide">2. Faça o pagamento</h4>
-               <div className="w-full h-40 bg-transparent rounded-xl flex flex-col items-center justify-center relative">
-                  <div className="w-32 h-32 drop-shadow-2xl hover:scale-110 transition-transform">
-                     <img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Coin/3D/coin_3d.png" alt="Moedas 3D" className="w-full h-full object-contain" />
-                  </div>
+               <div className="w-full h-40 bg-transparent rounded-xl flex flex-col items-center justify-center relative overflow-hidden border border-white/5 bg-[#050914]">
+                  <img src="https://i.postimg.cc/HLTCkwkq/0202.avif" alt="Pagamento" className="w-full h-full object-cover rounded-lg" />
                </div>
             </div>
 
